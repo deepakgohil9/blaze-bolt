@@ -69,6 +69,7 @@ const updatePackageJson = async () => {
 	packageJson.description = ''
 	packageJson.author = ''
 	packageJson.license = ''
+	delete packageJson.bin
 	fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, 0, /\t/.test(packageText) ? '\t' : 2) + '\n')
 	spinner.succeed()
 }
