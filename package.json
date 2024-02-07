@@ -9,6 +9,9 @@
 		"lint:fix": "eslint . --fix",
 		"prepare": "husky"
 	},
+	"bin": {
+		"blaze-bolt": "bin/init.js"
+	},
 	"author": "Deepak Gohil <gohildeepak2003@gmail.com>",
 	"license": "ISC",
 	"dependencies": {
