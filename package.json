@@ -10,7 +10,7 @@
 		"prepare": "husky"
 	},
 	"bin": {
-		"blaze-bolt": "bin/init.js"
+		"blaze-bolt": "bin/init.mjs"
 	},
 	"author": "Deepak Gohil <gohildeepak2003@gmail.com>",
 	"license": "ISC",

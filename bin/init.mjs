@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 /* eslint-disable no-console */
 
-const { promisify } = require('util')
-const cp = require('child_process')
-const path = require('path')
-const fs = require('fs')
-const ora = require('ora')
+import { promisify } from 'util'
+import cp from 'child_process'
+import path from 'path'
+import fs from 'fs'
+import ora from 'ora'
 
 const exec = promisify(cp.exec)
 const rm = promisify(fs.rm)
@@ -37,13 +37,11 @@ const downloadProject = async () => {
 
 const cleanProject = async () => {
 	const spinner = ora('Cleaning files...').start()
-	await Promise.all([
-		rm(path.join(projectDir, '.git'), { recursive: true, force: true }),
-		rm(path.join(projectDir, 'bin'), { recursive: true, force: true }),
-		rm(path.join(projectDir, 'LICENSE'), { force: true }),
-		rm(path.join(projectDir, 'README.md'), { force: true }),
-		rm(path.join(projectDir, 'package-lock.json'), { force: true })
-	])
+	await rm(path.join(projectDir, '.git'), { recursive: true, force: true })
+	await rm(path.join(projectDir, 'bin'), { recursive: true, force: true })
+	await rm(path.join(projectDir, 'LICENSE'), { force: true })
+	await rm(path.join(projectDir, 'README.md'), { force: true })
+	await rm(path.join(projectDir, 'package-lock.json'), { force: true })
 	process.chdir(projectDir)
 	await exec('npm uninstall ora')
 	spinner.succeed()
