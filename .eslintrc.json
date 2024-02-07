@@ -1,0 +1,44 @@
+{
+    "env": {
+        "commonjs": true,
+        "es2021": true,
+        "node": true
+    },
+    "extends": "standard",
+    "parserOptions": {
+        "ecmaVersion": "latest"
+    },
+    "rules": {
+        "indent": [
+            "error",
+            "tab"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "no-tabs": [
+            "error",
+            {
+                "allowIndentationTabs": true
+            }
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "semi": [
+            "error",
+            "never"
+        ],
+        "padding-line-between-statements": [
+            "error",
+            {
+                "blankLine": "always",
+                "prev": "block-like",
+                "next": "*"
+            }
+        ],
+        "no-console": "error"
+    }
+}
