@@ -1,6 +1,6 @@
 {
 	"name": "blaze-bolt",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Ignite your projects with lightning speed! Say goodbye to setup headaches and hello to rapid development",
 	"main": "app.js",
 	"scripts": {
